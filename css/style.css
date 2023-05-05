@@ -1,0 +1,80 @@
+body {
+  background-color: #c1c0b6;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px; 
+font-weight: 200; 
+line-height: 1.6; 
+color: #3f3b37;
+}
+img {
+  width: 100%;
+}
+a {
+  color: #3300ff;  
+  text-decoration: none; 
+}
+a:hover {
+  color: #00D208;
+  text-decoration: underline; 
+}
+a:visited { 
+  color: #ffffff;
+}
+a:active { 
+  color: #00FF07;
+}
+
+
+
+h1, h2, h3, h4 {
+  line-height: 1.4;
+}
+h1 {
+  font-size: 6.0em;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 4.25em;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 1.75em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+h4 {
+  font-size: 1.1em;
+  font-weight: 400;
+}
+
+.button {
+  display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
+  background-color: #433E2C;
+  color: #ffffff; /* needed to override the default link color */
+  font-weight: 400;
+  padding: 10px;
+  border-radius: 30px;
+  transition: 0.2s opacity;
+}
+.button:hover {
+  opacity: 0.5; /* Reduces the opacity of the button to 80% */
+  text-decoration: none;
+}
+.button.prototype {
+  background-color: transparent;
+  color: #ff7f50;
+  text-transform: uppercase;
+  border: 2px solid #ff7f50;
+}
+.button.prototype:hover {
+  background-color: #ff7f50;
+  color: #ffffff;
+}
+.button.prototype:active {
+  background-color: #ff7f50;
+  color: #3300ff;
+}
