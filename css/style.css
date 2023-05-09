@@ -93,12 +93,23 @@ img {
 padding-bottom: 25px; border-bottom: 1px solid #4a4a4a;
 }
 #work1 {
+  text-align: left;
+  text-transform: uppercase;
+  
+}
+#work1about {
+  text-align: left;
+  text-transform: none;
+}
+#work1img {
+  float: right;
   width: 50%
 }
-#work2 {
+#work2img {
+  float: right;
   width: 50%
 }
-#work3 {
+#work3img {
   float: right;
   width: 50%
 }
