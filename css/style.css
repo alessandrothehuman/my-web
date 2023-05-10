@@ -3,9 +3,8 @@ header {
   padding: 10px;
   
 }
-
 .logo {
-  max-width: 120.00px;
+  max-width: 200.00px;
   padding-top: 2.5px;
 }
 nav > ul {
@@ -49,22 +48,21 @@ header {
 }
 .css-box-shadow{
 
-	/*start ------------*/
-	width: [object Object]px; 
-	height: [object Object]px; 
-	background: #C1C0B6; 
-	border: solid #4a4a4a 1px; 
-	box-shadow: 0 0 9px rgba(16, 82, 214, 0.3)  ; 
-	-webkit-box-shadow: 0 0 9px rgba(17, 84, 217, 0.3)  ; 
-	-moz-box-shadow: 0 0 9px rgba(17, 84, 217, 0.3)  ; 
+    /*start ------------*/
+    width: [object Object]px; 
+    height: [object Object]px; 
+    background: #C1C0B6; 
+    border: solid #4a4a4a 1px; 
+    box-shadow: 0 0 9px rgba(16, 82, 214, 0.3)  ; 
+    -webkit-box-shadow: 0 0 9px rgba(17, 84, 217, 0.3)  ; 
+    -moz-box-shadow: 0 0 9px rgba(17, 84, 217, 0.3)  ; 
 }
 * {
   box-sizing: border-box;
 }
+
 #hero h1 {
   text-align: center; /* Centers text */
-}
-#hero h1 {
   margin: 0;
   padding: 0.67em 0;
 }
@@ -100,18 +98,6 @@ padding-bottom: 25px; border-bottom: 1px solid #4a4a4a;
 #work1about {
   text-align: left;
   text-transform: none;
-}
-#work1img {
-  float: right;
-  width: 50%
-}
-#work2img {
-  float: right;
-  width: 50%
-}
-#work3img {
-  float: right;
-  width: 50%
 }
 a {
   color: #ffffff;  
@@ -161,12 +147,13 @@ h4 {
   background-color: #433E2C;
   color: #ffffff; /* needed to override the default link color */
   font-weight: 400;
+  text-decoration: none;
   padding: 10px;
   border-radius: 30px;
   transition: 0.2s opacity;
 }
 .button:hover {
-  opacity: 0.5; /* Reduces the opacity of the button to 80% */
+  opacity: 0.8; /* Reduces the opacity of the button to 80% */
   text-decoration: none;
 }
 .button.prototype {
@@ -182,7 +169,6 @@ h4 {
 .button.prototype:active {
   background-color: #ff7f50;
   color: #3300ff;
-
 }
 footer {
   background-color: #c1c0b6;
@@ -204,4 +190,130 @@ footer {
   max-width: 500.00px;
   padding-top: 2.5px;
 }
-
+.animation {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.ball{
+  background-color: #ff1a66;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  position: relative;
+  top:100px;
+  left: 40px;
+  animation: bounce 0.9s infinite;
+}
+@keyframes bounce{
+  10%{
+    height: 50px;
+    width: 50px;
+  }
+  50%{
+    height:30px;
+    width:57px;
+    transform: translateY(240px);
+  }
+  
+}
+.container2{
+  width:57px;
+  height: 50px;
+}
+.shadow{
+  background-color: rgba(8,8,8,0.05);
+  height: 10px;
+  width: 65px;
+  border-radius: 50%;
+  position: relative;
+  top: 310px;
+  left: 35px;
+  z-index: -1;
+  animation: shrink 0.9s infinite;
+}
+@keyframes shrink{
+  50%{
+    transform:scaleX(0.5);
+  }
+}
+/*======medium devices (640px and larger)======*/
+@media only screen and (min-width:640px) {
+header {
+  text-align: unset;
+  padding: 10px 0;
+}
+main {
+  padding-top: 80px;
+}
+nav {
+width: auto;
+float: right;
+margin-top: 4px;
+  }
+}
+nav > ul {
+  margin: 1em 0;
+  display:inline-block;
+}
+nav > ul > li {
+  display: inline-block
+}
+body {
+  font-size: 18px;
+}
+h1 {
+  font-size: 2.5em;
+}
+#hero {
+  text-align: center;
+}
+#hero span {
+  display: block;
+}
+.col-md-6 {
+  width: 50%
+}
+[class*="col-"] {
+  float: left;
+  padding: 10px;
+}
+.row:after {
+  content:"";
+  clear: both;
+  display:table;
+}
+/*======large devices (1040px and larger)======*/
+@media only screen and (min-width:1024px) {
+  main {
+    padding-top: 100px;
+  }
+  .col-lg-7 {
+    width: 60%;
+  }
+  .col-lg-5 {
+    width: 40%;
+  }
+}
+body {
+  font-size: 22px;
+}
+.logo {
+  max-width: 200px;
+  padding-top: 22px;
+}
+/*======m-large devices (max 1200px)======*/
+@media only screen and (min-width:1200px) {
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/*======x-large devices (1440px and larger)======*/
+@media only screen and (min-width:1440px) {
+  
+}
