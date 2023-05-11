@@ -1,10 +1,24 @@
+/*======================== 
+GLOBAL
+==========================*/
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #c1c0b6;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px; 
+font-weight: 200; 
+line-height: 1.6; 
+color: #3f3b37;
+}
 header {
   background-color: #c1c0b6;
   padding: 10px;
   
 }
 .logo {
-  max-width: 200.00px;
+  max-width: 200px;
   padding-top: 2.5px;
 }
 nav > ul {
@@ -19,24 +33,29 @@ nav > ul > li > a {
   text-transform: uppercase;
   font-weight: 300;
   color: #4a4a4a;
+  display: block;
+  
 }
 nav > ul > li > a:visited{
   padding: 0 15px;
   text-transform: uppercase;
   font-weight: 300;
-  color: #4a4a4a;
+  color: #CE7C00;
 }
 nav > ul > li > a:hover{
   padding: 0 15px;
   text-transform: uppercase;
   font-weight: 300;
-  color: #00D208;
+  color: #159800;
+  text-decoration: none;
+  border-bottom: 1px solid #4a4a4a;
 }
 nav > ul > li > a:active{
   padding: 0 15px;
   text-transform: uppercase;
   font-weight: 300;
-  color: #00FF07;
+  color: #E316E8;
+  text-decoration: none;
 }
 header {
   position: fixed;
@@ -57,10 +76,6 @@ header {
     -webkit-box-shadow: 0 0 9px rgba(17, 84, 217, 0.3)  ; 
     -moz-box-shadow: 0 0 9px rgba(17, 84, 217, 0.3)  ; 
 }
-* {
-  box-sizing: border-box;
-}
-
 #hero h1 {
   text-align: center; /* Centers text */
   margin: 0;
@@ -69,14 +84,7 @@ header {
 main {
   padding-top: 133px;
 }
-body {
-  background-color: #c1c0b6;
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px; 
-font-weight: 200; 
-line-height: 1.6; 
-color: #3f3b37;
-}
+
 #hero {
   background-color: #c1c0b6;
   padding: 20px 0;
@@ -86,14 +94,29 @@ color: #3f3b37;
 }
 img {
   width: 100%;
+  border-radius: 15px;
 }
 #work .row {
 padding-bottom: 25px; border-bottom: 1px solid #4a4a4a;
 }
-#work1 {
-  text-align: left;
-  text-transform: uppercase;
-  
+#work .wrapper{
+  display: flex;
+  flex-direction: column;
+}
+#work .row{
+  display: flex;
+  flex-direction: column;
+}
+#work .column{
+  display: flex;
+  flex-direction: column;
+}
+.project-intro .container {
+  display: flex;
+  flex-direction: column;
+}
+.project-intro .container div {
+  order: -1;
 }
 #work1about {
   text-align: left;
@@ -107,16 +130,18 @@ a:visited {
   color: #ffffff;
 }
 a:hover {
-  color: #00D208;
+  color: #159800;
   text-decoration: underline; 
 }
 a:focus { 
   color: #05FFF0;
 }
 a:active { 
-  color: #00FF07;
+  color: #159800;
 }
-
+/*========================================
+TYPOGRAPHY
+=========================================*/
 h1, h2, h3, h4 {
   line-height: 1.4;
 }
@@ -141,14 +166,16 @@ h4 {
   font-size: 1.0em;
   font-weight: 400;
 }
-
+/*========================================
+LINKS & BUTTONS
+=========================================*/
 .button {
   display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
   background-color: #433E2C;
   color: #ffffff; /* needed to override the default link color */
   font-weight: 400;
   text-decoration: none;
-  padding: 10px;
+  padding: 10px 30px;
   border-radius: 30px;
   transition: 0.2s opacity;
 }
@@ -156,9 +183,16 @@ h4 {
   opacity: 0.8; /* Reduces the opacity of the button to 80% */
   text-decoration: none;
 }
-.button.prototype {
+.button-proto {
   background-color: transparent;
   color: #ff7f50;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  margin-right: 50px;
+  margin-left: 80px;
+  padding: 10px 30px;
+  border-radius: 30px;
+  text-align: center;
   text-transform: uppercase;
   border: 2px solid #ff7f50;
 }
@@ -171,13 +205,36 @@ h4 {
   color: #3300ff;
 }
 footer {
-  background-color: #c1c0b6;
+  background-color: #433e2c;
   padding: 10px;
+  text-align: center;
+  color: #c1c0b6;
   
 }
-.socialimage {
-  max-width: 40.00px;
+footer .button {
+  background: #c1c0b6;
+  color: #4a4a4a;
+}
+.email {
+  margin-bottom: 2em;
+}
+footer .socialimage {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 80.00px;
   padding-top: 2.5px;
+  color: #c1c0b6;
+}
+.project-prototype {
+  padding: 0 0 30px;
+}
+.project-prototype .container {
+text-align: center;
+}
+.project-prototype.button.prototype{
+  text-align: center;
+  margin: 0 0 50px;
 }
 /*Layout styling*/
 .container {
@@ -189,63 +246,18 @@ footer {
 .profilepic {
   max-width: 500.00px;
   padding-top: 2.5px;
+  margin: 0 auto;
+  display: block;
 }
-.animation {
-  position: absolute;
-  margin: auto;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-}
-.ball{
-  background-color: #ff1a66;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  position: relative;
-  top:100px;
-  left: 40px;
-  animation: bounce 0.9s infinite;
-}
-@keyframes bounce{
-  10%{
-    height: 50px;
-    width: 50px;
+/*======================== 
+SEMI-MEDIUM DEVICES (640px and larger)
+==========================*/
+
+@media (min-width: 640px){
+  header {
+    text-align: unset;
+    padding: 10px 0;
   }
-  50%{
-    height:30px;
-    width:57px;
-    transform: translateY(240px);
-  }
-  
-}
-.container2{
-  width:57px;
-  height: 50px;
-}
-.shadow{
-  background-color: rgba(8,8,8,0.05);
-  height: 10px;
-  width: 65px;
-  border-radius: 50%;
-  position: relative;
-  top: 310px;
-  left: 35px;
-  z-index: -1;
-  animation: shrink 0.9s infinite;
-}
-@keyframes shrink{
-  50%{
-    transform:scaleX(0.5);
-  }
-}
-/*======medium devices (640px and larger)======*/
-@media only screen and (min-width:640px) {
-header {
-  text-align: unset;
-  padding: 10px 0;
-}
 main {
   padding-top: 80px;
 }
@@ -254,13 +266,22 @@ width: auto;
 float: right;
 margin-top: 4px;
   }
-}
+
 nav > ul {
   margin: 1em 0;
   display:inline-block;
 }
 nav > ul > li {
   display: inline-block
+}
+#work .row{
+  flex-direction: row;
+  justify-content:space-between;
+}
+#work .column{
+  justify-content:center;
+  align-items:flex-start;
+  width: 46%;
 }
 body {
   font-size: 18px;
@@ -279,14 +300,26 @@ h1 {
 }
 [class*="col-"] {
   float: left;
-  padding: 10px;
+  padding: 25px;
 }
 .row:after {
   content:"";
   clear: both;
   display:table;
 }
-/*======large devices (1040px and larger)======*/
+.project-prototype.container {
+  display: flex;
+  justify-content: space-between;
+  }
+  .project-prototype.button{
+    margin: 0 0.5em;
+  }
+}
+
+/*======================== 
+MEDIUM DEVICES (1024px and larger)
+==========================*/
+
 @media only screen and (min-width:1024px) {
   main {
     padding-top: 100px;
@@ -297,7 +330,6 @@ h1 {
   .col-lg-5 {
     width: 40%;
   }
-}
 body {
   font-size: 22px;
 }
@@ -305,15 +337,50 @@ body {
   max-width: 200px;
   padding-top: 22px;
 }
-/*======m-large devices (max 1200px)======*/
+#work .wrapper{
+  flex-direction: row;
+  gap:50px;
+}
+#work .row{
+  flex-direction: column;
+  justify-content:flex-start;
+  width:33.3%;
+}
+#work .column{
+  justify-content:flex-start;
+  align-items:flex-start;
+  width: 100%;
+}
+.project-prototype.container {
+  display: flex;
+  justify-content: space-between;
+  }
+  .project-prototype.button{
+    margin: 0 0.5em;
+  }
+}
+/*======================== 
+LARGE DEVICES (1200px and larger)
+==========================*/
+
 @media only screen and (min-width:1200px) {
   .container {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
   }
+  .project-prototype.container {
+    display: flex;
+    justify-content: space-between;
+    }
+    .project-prototype.button{
+      margin: 0 0.5em;
+    }
 }
-/*======x-large devices (1440px and larger)======*/
+/*======================== 
+XTRA LARGE DEVICES (1440px and larger)
+==========================*/
+
 @media only screen and (min-width:1440px) {
   
 }
