@@ -21,6 +21,7 @@ header {
   max-width: 200px;
   padding-top: 2.5px;
 }
+nav .active { color: #05FFF0; }
 nav > ul {
   list-style-type: none;
   padding: 0;
@@ -186,10 +187,6 @@ LINKS & BUTTONS
 .button-proto {
   background-color: transparent;
   color: #ff7f50;
-  margin-top: 50px;
-  margin-bottom: 100px;
-  margin-right: 50px;
-  margin-left: 80px;
   padding: 10px 30px;
   border-radius: 30px;
   text-align: center;
@@ -203,6 +200,9 @@ LINKS & BUTTONS
 .button.prototype:active {
   background-color: #ff7f50;
   color: #3300ff;
+}
+#work .button {
+  text-align: center;
 }
 footer {
   background-color: #433e2c;
@@ -222,15 +222,21 @@ footer .socialimage {
   justify-content: center;
   align-items: center;
   text-align: center;
-  max-width: 80.00px;
   padding-top: 2.5px;
   color: #c1c0b6;
+}
+footer .soacialimage img {
+  width: 80px;
 }
 .project-prototype {
   padding: 0 0 30px;
 }
 .project-prototype .container {
-text-align: center;
+  display: flex;
+  row-gap: 20px;
+  column-gap: 30px;
+  flex-direction: column;
+  text-align: center;
 }
 .project-prototype.button.prototype{
   text-align: center;
@@ -307,9 +313,11 @@ h1 {
   clear: both;
   display:table;
 }
-.project-prototype.container {
-  display: flex;
-  justify-content: space-between;
+.project-prototype .container {
+display: flex;
+row-gap: 20px;
+column-gap: 30px;
+flex-direction: row;
   }
   .project-prototype.button{
     margin: 0 0.5em;
@@ -351,9 +359,11 @@ body {
   align-items:flex-start;
   width: 100%;
 }
-.project-prototype.container {
+.project-prototype .container {
   display: flex;
-  justify-content: space-between;
+  row-gap: 20px;
+  column-gap: 30px;
+  flex-direction: row;
   }
   .project-prototype.button{
     margin: 0 0.5em;
@@ -369,9 +379,11 @@ LARGE DEVICES (1200px and larger)
     margin-left: auto;
     margin-right: auto;
   }
-  .project-prototype.container {
+  .project-prototype .container {
     display: flex;
-    justify-content: space-between;
+    row-gap: 20px;
+    column-gap: 30px;
+    flex-direction: row;
     }
     .project-prototype.button{
       margin: 0 0.5em;
