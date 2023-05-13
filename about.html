@@ -7,20 +7,27 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/e0f729f372.js" crossorigin="anonymous">
+        </script>
         <meta charset="utf-8">
         <title>About Alex</title>
     </head>
     <body>
 <header>
     <div class="container">
+        <div class="navtoggle" id="myNavtoggle">
         <a href="index.html"><img src="img/logo/logo.svg" alt="Alex Tutkovsky" class="logo"></a>
     <nav>
         <ul>
- <li><a href="index.html" class="active">Work</a></li> 
- <li><a href="about.html">About</a></li>
-  <li><a href="#contact">Contact</a></li>
+<li><a href="index.html">Work</a></li> 
+<li><a href="about.html" class="active">About</a></li>
+<li><a href="#contact" onclick="menuToggle()">Contact</a></li>
+<li>
+    <a href="javascript:void(0);" class="icon" onclick="menuToggle()"><i class="fas fa-bars"></i></a>
+</li>
 </ul>
 </nav>
+</div>
 </div>
 </header>
 <main>
@@ -76,6 +83,7 @@
 <p>@2023 Alex Tutkovsky-All Rights Reserved</p>
 </div>
 </footer>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 <script src="js/scripts.js"></script>
 </body>
 </html>
