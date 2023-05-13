@@ -14,40 +14,39 @@ color: #3f3b37;
 }
 header {
   background-color: #c1c0b6;
-  padding: 10px;
+  padding: 10px 0 4px;
   
 }
 .logo {
-  max-width: 200px;
+  max-width: 150px;
   padding-top: 2.5px;
 }
-nav .active { color: #05FFF0; }
+nav .active {
+  color: #5c9a95 !important;
+}
 nav > ul {
   list-style-type: none;
   padding: 0;
-}
-nav > ul > li {
-  display: inline-block;
+  margin: 0;
 }
 nav > ul > li > a {
   padding: 0 15px;
   text-transform: uppercase;
   font-weight: 300;
-  color: #4a4a4a;
+  color: #1f1b1b;
   display: block;
-  
 }
 nav > ul > li > a:visited{
   padding: 0 15px;
   text-transform: uppercase;
   font-weight: 300;
-  color: #CE7C00;
+  color: #877a65;
 }
 nav > ul > li > a:hover{
   padding: 0 15px;
   text-transform: uppercase;
   font-weight: 300;
-  color: #159800;
+  color: #c9aa70;
   text-decoration: none;
   border-bottom: 1px solid #4a4a4a;
 }
@@ -55,16 +54,39 @@ nav > ul > li > a:active{
   padding: 0 15px;
   text-transform: uppercase;
   font-weight: 300;
-  color: #E316E8;
+  color: #ff7700;
   text-decoration: none;
 }
 header {
   position: fixed;
   background-color: #c1c0b6;
-  text-align: center;
   padding: 10px 0;
   width: 100%;
   
+}
+.navtoggle li:not(:last-child) {
+  display: none;
+}
+.navtoggle, .navtoggle.responsive {
+  position: relative;
+}
+.navtoggle li .icon {
+  position: absolute;
+  right: 0;
+  top: 2px;
+  font-size: 20px;
+  padding-right: 0;
+}
+.navtoggle.responsive nav {
+  padding: 24px 0 0;
+}
+.navtoggle.responsive li  {
+  display: block;
+  padding: 10px 0;
+  border-top: 1px solid rgba(94, 98, 108, 0.5);
+}
+.navtoggle.responsive li:last-child {
+  padding: 0 0 10px;
 }
 .css-box-shadow{
 
@@ -83,7 +105,7 @@ header {
   padding: 0.67em 0;
 }
 main {
-  padding-top: 133px;
+  padding-top: 59px;
 }
 
 #hero {
@@ -225,7 +247,7 @@ footer .socialimage {
   padding-top: 2.5px;
   color: #c1c0b6;
 }
-footer .soacialimage img {
+footer .socialimage img {
   width: 80px;
 }
 .project-prototype {
@@ -259,10 +281,19 @@ footer .soacialimage img {
 SEMI-MEDIUM DEVICES (640px and larger)
 ==========================*/
 
-@media (min-width: 640px){
+@media (min-width: 640px) {
   header {
     text-align: unset;
     padding: 10px 0;
+  }
+  nav > ul > li {
+    display: inline-block;
+  }
+  .navtoggle li:not(:last-child) {
+    display: inline-block;
+  }
+  .navtoggle li:last-child {
+    display: none;
   }
 main {
   padding-top: 80px;
@@ -292,6 +323,9 @@ nav > ul > li {
 body {
   font-size: 18px;
 }
+.logo {
+  max-width: 200px;
+  padding-top: 14px;
 h1 {
   font-size: 2.5em;
 }
